@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1789577060706,
-  "repoUrl": "https://github.com/moov-io/watchman",
+  "lastUpdate": 1791484062887,
+  "repoUrl": "https://github.com/ajayp/watchman",
   "entries": {
     "moov-io/watchman Common Benchmarks": [
       {
@@ -956,6 +956,580 @@ window.BENCHMARK_DATA = {
             "value": 1,
             "unit": "allocs/op",
             "extra": "32719 times\n4 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Adam Shannon",
+            "username": "adamdecaf",
+            "email": "adamkshannon@gmail.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "21aa37427a7b6501c2f6e3a51d00a1d419aa3924",
+          "message": "research: add Cascade embedding comparison with EmbeddingGemma 2 (#943)\n\n* research: add Cascade embedding comparison with EmbeddingGemma 2\n\nPairwise pkg/search.Similarity plus Ollama cosine on the Cascade lot-1/lot-2\nfixtures, mixed as production embed-hybrid (max JW/cosine on cross-script\npairs only). RESULTS.md is the checked-in baseline for later model comparisons.\n\nRefs #919\n\n* fix(research): write cascade embedding report with fmt.Fprint\n\nforbidigo bans fmt.Print* outside cmd/; research CLIs already use fmt.Fprint.",
+          "timestamp": "2026-10-07T17:29:11Z",
+          "url": "https://github.com/ajayp/watchman/commit/21aa37427a7b6501c2f6e3a51d00a1d419aa3924"
+        },
+        "date": 1791484062384,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkDebugSimilarity/individuals (github.com/moov-io/watchman/pkg/search)",
+            "value": 8370,
+            "unit": "ns/op\t    2112 B/op\t      48 allocs/op",
+            "extra": "135375 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/individuals (github.com/moov-io/watchman/pkg/search) - ns/op",
+            "value": 8370,
+            "unit": "ns/op",
+            "extra": "135375 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/individuals (github.com/moov-io/watchman/pkg/search) - B/op",
+            "value": 2112,
+            "unit": "B/op",
+            "extra": "135375 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/individuals (github.com/moov-io/watchman/pkg/search) - allocs/op",
+            "value": 48,
+            "unit": "allocs/op",
+            "extra": "135375 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/individuals-debug (github.com/moov-io/watchman/pkg/search)",
+            "value": 28374,
+            "unit": "ns/op\t   11819 B/op\t     100 allocs/op",
+            "extra": "42526 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/individuals-debug (github.com/moov-io/watchman/pkg/search) - ns/op",
+            "value": 28374,
+            "unit": "ns/op",
+            "extra": "42526 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/individuals-debug (github.com/moov-io/watchman/pkg/search) - B/op",
+            "value": 11819,
+            "unit": "B/op",
+            "extra": "42526 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/individuals-debug (github.com/moov-io/watchman/pkg/search) - allocs/op",
+            "value": 100,
+            "unit": "allocs/op",
+            "extra": "42526 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/businesses (github.com/moov-io/watchman/pkg/search)",
+            "value": 13104,
+            "unit": "ns/op\t    1614 B/op\t      35 allocs/op",
+            "extra": "89583 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/businesses (github.com/moov-io/watchman/pkg/search) - ns/op",
+            "value": 13104,
+            "unit": "ns/op",
+            "extra": "89583 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/businesses (github.com/moov-io/watchman/pkg/search) - B/op",
+            "value": 1614,
+            "unit": "B/op",
+            "extra": "89583 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/businesses (github.com/moov-io/watchman/pkg/search) - allocs/op",
+            "value": 35,
+            "unit": "allocs/op",
+            "extra": "89583 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/businesses-debug (github.com/moov-io/watchman/pkg/search)",
+            "value": 30241,
+            "unit": "ns/op\t   10097 B/op\t      71 allocs/op",
+            "extra": "39793 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/businesses-debug (github.com/moov-io/watchman/pkg/search) - ns/op",
+            "value": 30241,
+            "unit": "ns/op",
+            "extra": "39793 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/businesses-debug (github.com/moov-io/watchman/pkg/search) - B/op",
+            "value": 10097,
+            "unit": "B/op",
+            "extra": "39793 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/businesses-debug (github.com/moov-io/watchman/pkg/search) - allocs/op",
+            "value": 71,
+            "unit": "allocs/op",
+            "extra": "39793 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/vessels (github.com/moov-io/watchman/pkg/search)",
+            "value": 1620,
+            "unit": "ns/op\t     320 B/op\t       9 allocs/op",
+            "extra": "765417 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/vessels (github.com/moov-io/watchman/pkg/search) - ns/op",
+            "value": 1620,
+            "unit": "ns/op",
+            "extra": "765417 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/vessels (github.com/moov-io/watchman/pkg/search) - B/op",
+            "value": 320,
+            "unit": "B/op",
+            "extra": "765417 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/vessels (github.com/moov-io/watchman/pkg/search) - allocs/op",
+            "value": 9,
+            "unit": "allocs/op",
+            "extra": "765417 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/vessels-debug (github.com/moov-io/watchman/pkg/search)",
+            "value": 14086,
+            "unit": "ns/op\t    5529 B/op\t      28 allocs/op",
+            "extra": "85292 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/vessels-debug (github.com/moov-io/watchman/pkg/search) - ns/op",
+            "value": 14086,
+            "unit": "ns/op",
+            "extra": "85292 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/vessels-debug (github.com/moov-io/watchman/pkg/search) - B/op",
+            "value": 5529,
+            "unit": "B/op",
+            "extra": "85292 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/vessels-debug (github.com/moov-io/watchman/pkg/search) - allocs/op",
+            "value": 28,
+            "unit": "allocs/op",
+            "extra": "85292 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/aircraft (github.com/moov-io/watchman/pkg/search)",
+            "value": 64234,
+            "unit": "ns/op\t   10009 B/op\t     205 allocs/op",
+            "extra": "18543 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/aircraft (github.com/moov-io/watchman/pkg/search) - ns/op",
+            "value": 64234,
+            "unit": "ns/op",
+            "extra": "18543 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/aircraft (github.com/moov-io/watchman/pkg/search) - B/op",
+            "value": 10009,
+            "unit": "B/op",
+            "extra": "18543 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/aircraft (github.com/moov-io/watchman/pkg/search) - allocs/op",
+            "value": 205,
+            "unit": "allocs/op",
+            "extra": "18543 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/aircraft-debug (github.com/moov-io/watchman/pkg/search)",
+            "value": 103871,
+            "unit": "ns/op\t   28940 B/op\t     338 allocs/op",
+            "extra": "10000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/aircraft-debug (github.com/moov-io/watchman/pkg/search) - ns/op",
+            "value": 103871,
+            "unit": "ns/op",
+            "extra": "10000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/aircraft-debug (github.com/moov-io/watchman/pkg/search) - B/op",
+            "value": 28940,
+            "unit": "B/op",
+            "extra": "10000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkDebugSimilarity/aircraft-debug (github.com/moov-io/watchman/pkg/search) - allocs/op",
+            "value": 338,
+            "unit": "allocs/op",
+            "extra": "10000 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_Search/dynamic_goroutine_count (github.com/moov-io/watchman/internal/search)",
+            "value": 17542652,
+            "unit": "ns/op\t 6739955 B/op\t  152707 allocs/op",
+            "extra": "69 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_Search/dynamic_goroutine_count (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 17542652,
+            "unit": "ns/op",
+            "extra": "69 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_Search/dynamic_goroutine_count (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 6739955,
+            "unit": "B/op",
+            "extra": "69 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_Search/dynamic_goroutine_count (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 152707,
+            "unit": "allocs/op",
+            "extra": "69 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/off (github.com/moov-io/watchman/internal/search)",
+            "value": 666732,
+            "unit": "ns/op\t  256263 B/op\t    5000 allocs/op",
+            "extra": "1549 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/off (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 666732,
+            "unit": "ns/op",
+            "extra": "1549 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/off (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 256263,
+            "unit": "B/op",
+            "extra": "1549 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/off (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5000,
+            "unit": "allocs/op",
+            "extra": "1549 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/debug_all_returned (github.com/moov-io/watchman/internal/search)",
+            "value": 902202,
+            "unit": "ns/op\t  340396 B/op\t    5330 allocs/op",
+            "extra": "1395 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/debug_all_returned (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 902202,
+            "unit": "ns/op",
+            "extra": "1395 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/debug_all_returned (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 340396,
+            "unit": "B/op",
+            "extra": "1395 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/debug_all_returned (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5330,
+            "unit": "allocs/op",
+            "extra": "1395 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/debug_threshold_0.80 (github.com/moov-io/watchman/internal/search)",
+            "value": 679984,
+            "unit": "ns/op\t  258102 B/op\t    5002 allocs/op",
+            "extra": "1924 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/debug_threshold_0.80 (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 679984,
+            "unit": "ns/op",
+            "extra": "1924 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/debug_threshold_0.80 (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 258102,
+            "unit": "B/op",
+            "extra": "1924 times\n4 procs"
+          },
+          {
+            "name": "Benchmark_SearchDebug/debug_threshold_0.80 (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5002,
+            "unit": "allocs/op",
+            "extra": "1924 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/normal (github.com/moov-io/watchman/internal/search)",
+            "value": 1044317,
+            "unit": "ns/op\t  275240 B/op\t    5462 allocs/op",
+            "extra": "1534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/normal (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 1044317,
+            "unit": "ns/op",
+            "extra": "1534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/normal (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 275240,
+            "unit": "B/op",
+            "extra": "1534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/normal (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5462,
+            "unit": "allocs/op",
+            "extra": "1534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/debug (github.com/moov-io/watchman/internal/search)",
+            "value": 1181998,
+            "unit": "ns/op\t  366809 B/op\t    5666 allocs/op",
+            "extra": "964 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/debug (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 1181998,
+            "unit": "ns/op",
+            "extra": "964 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/debug (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 366809,
+            "unit": "B/op",
+            "extra": "964 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/debug (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5666,
+            "unit": "allocs/op",
+            "extra": "964 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/debug-threshold (github.com/moov-io/watchman/internal/search)",
+            "value": 772119,
+            "unit": "ns/op\t  278437 B/op\t    5479 allocs/op",
+            "extra": "1626 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/debug-threshold (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 772119,
+            "unit": "ns/op",
+            "extra": "1626 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/debug-threshold (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 278437,
+            "unit": "B/op",
+            "extra": "1626 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/debug-threshold (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5479,
+            "unit": "allocs/op",
+            "extra": "1626 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_address (github.com/moov-io/watchman/internal/search)",
+            "value": 779042,
+            "unit": "ns/op\t  274469 B/op\t    5455 allocs/op",
+            "extra": "1621 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_address (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 779042,
+            "unit": "ns/op",
+            "extra": "1621 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_address (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 274469,
+            "unit": "B/op",
+            "extra": "1621 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_address (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5455,
+            "unit": "allocs/op",
+            "extra": "1621 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_email (github.com/moov-io/watchman/internal/search)",
+            "value": 778502,
+            "unit": "ns/op\t  274596 B/op\t    5456 allocs/op",
+            "extra": "1630 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_email (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 778502,
+            "unit": "ns/op",
+            "extra": "1630 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_email (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 274596,
+            "unit": "B/op",
+            "extra": "1630 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_email (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5456,
+            "unit": "allocs/op",
+            "extra": "1630 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_address_email (github.com/moov-io/watchman/internal/search)",
+            "value": 778320,
+            "unit": "ns/op\t  274566 B/op\t    5456 allocs/op",
+            "extra": "1618 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_address_email (github.com/moov-io/watchman/internal/search) - ns/op",
+            "value": 778320,
+            "unit": "ns/op",
+            "extra": "1618 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_address_email (github.com/moov-io/watchman/internal/search) - B/op",
+            "value": 274566,
+            "unit": "B/op",
+            "extra": "1618 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkAPI_Search/name_address_email (github.com/moov-io/watchman/internal/search) - allocs/op",
+            "value": 5456,
+            "unit": "allocs/op",
+            "extra": "1618 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkJaroWinkler/BestPairsJaroWinkler (github.com/moov-io/watchman/internal/stringscore)",
+            "value": 3440,
+            "unit": "ns/op\t      50 B/op\t       1 allocs/op",
+            "extra": "336328 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkJaroWinkler/BestPairsJaroWinkler (github.com/moov-io/watchman/internal/stringscore) - ns/op",
+            "value": 3440,
+            "unit": "ns/op",
+            "extra": "336328 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkJaroWinkler/BestPairsJaroWinkler (github.com/moov-io/watchman/internal/stringscore) - B/op",
+            "value": 50,
+            "unit": "B/op",
+            "extra": "336328 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkJaroWinkler/BestPairsJaroWinkler (github.com/moov-io/watchman/internal/stringscore) - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "336328 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkJaroWinkler/BestPairCombinationJaroWinkler (github.com/moov-io/watchman/internal/stringscore)",
+            "value": 4683,
+            "unit": "ns/op\t     351 B/op\t       6 allocs/op",
+            "extra": "269648 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkJaroWinkler/BestPairCombinationJaroWinkler (github.com/moov-io/watchman/internal/stringscore) - ns/op",
+            "value": 4683,
+            "unit": "ns/op",
+            "extra": "269648 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkJaroWinkler/BestPairCombinationJaroWinkler (github.com/moov-io/watchman/internal/stringscore) - B/op",
+            "value": 351,
+            "unit": "B/op",
+            "extra": "269648 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkJaroWinkler/BestPairCombinationJaroWinkler (github.com/moov-io/watchman/internal/stringscore) - allocs/op",
+            "value": 6,
+            "unit": "allocs/op",
+            "extra": "269648 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkEncodeSoundex (github.com/moov-io/watchman/internal/stringscore)",
+            "value": 67.51,
+            "unit": "ns/op\t       4 B/op\t       1 allocs/op",
+            "extra": "17672665 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkEncodeSoundex (github.com/moov-io/watchman/internal/stringscore) - ns/op",
+            "value": 67.51,
+            "unit": "ns/op",
+            "extra": "17672665 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkEncodeSoundex (github.com/moov-io/watchman/internal/stringscore) - B/op",
+            "value": 4,
+            "unit": "B/op",
+            "extra": "17672665 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkEncodeSoundex (github.com/moov-io/watchman/internal/stringscore) - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "17672665 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkSoundexMatch (github.com/moov-io/watchman/internal/stringscore)",
+            "value": 141.1,
+            "unit": "ns/op\t       8 B/op\t       2 allocs/op",
+            "extra": "8464017 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkSoundexMatch (github.com/moov-io/watchman/internal/stringscore) - ns/op",
+            "value": 141.1,
+            "unit": "ns/op",
+            "extra": "8464017 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkSoundexMatch (github.com/moov-io/watchman/internal/stringscore) - B/op",
+            "value": 8,
+            "unit": "B/op",
+            "extra": "8464017 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkSoundexMatch (github.com/moov-io/watchman/internal/stringscore) - allocs/op",
+            "value": 2,
+            "unit": "allocs/op",
+            "extra": "8464017 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkPhoneNumber (github.com/moov-io/watchman/internal/norm)",
+            "value": 34977,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "34357 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkPhoneNumber (github.com/moov-io/watchman/internal/norm) - ns/op",
+            "value": 34977,
+            "unit": "ns/op",
+            "extra": "34357 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkPhoneNumber (github.com/moov-io/watchman/internal/norm) - B/op",
+            "value": 16,
+            "unit": "B/op",
+            "extra": "34357 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkPhoneNumber (github.com/moov-io/watchman/internal/norm) - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "34357 times\n4 procs"
           }
         ]
       }
